@@ -2,13 +2,13 @@
 
 for a in range(48, 58):
     for b in range(48, 58):
-        if ord(a) == ord(b) or ord(b) <= ord(a):
+        if chr(a) == chr(b) or chr(b) <= chr(a):
             continue
         else:
-            print("{}{}".format(ord(a), ord(b))
+            print("{}{}".format(chr(a), chr(b)), end='')
 
-            if (a == 56 && b == 57):
+            if (a == 56 and b == 57):
                 continue
             else:
-                print("{} ".format(ord(44)))
+                print("{} ".format(chr(44)),end='')
 print("")
