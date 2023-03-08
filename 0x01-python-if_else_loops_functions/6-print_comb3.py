@@ -10,5 +10,5 @@ for a in range(48, 58):
             if (a == 56 and b == 57):
                 continue
             else:
-                print("{} ".format(chr(44)),end='')
+                print("{} ".format(chr(44)), end='')
 print("")
