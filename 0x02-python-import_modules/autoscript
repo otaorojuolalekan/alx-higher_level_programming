@@ -1,0 +1,6 @@
+#!/bin/bash
+chmod u+x $(ls -1t | head -1)
+git add .
+git commit -m "Added scripts for 
+0x02. Python - import & modules"
+git push

@@ -1,0 +1,2 @@
+#!/usr/bin/python3
+from 101-help_module import printcool
