@@ -2,7 +2,7 @@
 
 for a in range(48, 58):
     for b in range(48, 58):
-        if chr(a) == chr(b) or chr(b) <= chr(a):
+        if chr(b) <= chr(a):
             continue
         else:
             print("{}{}".format(chr(a), chr(b)), end='')
