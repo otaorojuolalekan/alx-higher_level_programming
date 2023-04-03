@@ -1,2 +1,74 @@
-The add_integer module
+The ``add_integer`` module tries to add 2 integers or floats
 =============
+test cases
+
+case 1:
+a & b: integer
+
+::
+
+   >>> from 0-add_integer import add_integer
+   >>> add_integer(4, 7)
+   11
+
+case 2:
+a: integer & b: float
+This will first cast b into float before performing the function
+
+::
+
+   >>> from 0-add_integer import add_integer
+   >>> add_integer(1, 7.8)
+   8
+
+case 3:
+both a & b : float
+This will cast a and b to int before doing function.
+
+::
+
+   >>> from 0-add_integer import add_integer
+   >>> add_integer(2.4, 32.5)
+   34
+
+case 4: b not supplied
+b gets default value of 98
+
+::
+
+   >>> from 0-add_integer import add_integer
+   >>> add_integer(43)
+   141
+   
+case 5: a is non integer or float
+raises exception for a
+
+::
+
+   >>> from 0-add_integer import add_integer
+   >>> add_integer('scopatu', 15)
+   Traceback (most recent call last):
+      ...
+   TypeError: a must be an integer
+   
+case 6: b is non integer or float
+raises exception for b
+
+::
+
+   >>> from 0-add_integer import add_integer
+   >>> add_integer(17, 'mana')
+   Traceback (most recent call last):
+      ...
+   TypeError: b must be an integer
+
+case 7: both a & b non integer or float
+raises exception for a
+
+::
+
+   >>> from 0-add_integer import add_integer
+   >>> add_integer('scopatu', 'mana')
+   Traceback (most recent call last):
+      ...
+   TypeError: a must be an integer 
