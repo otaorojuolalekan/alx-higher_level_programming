@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+""" Addition module:
+   Adds two arguments a and b
+   raise exception if not integer or float
+"""
 def add_integer(a, b=98):
     """
     Adds two integers a and b
@@ -7,16 +11,9 @@ def add_integer(a, b=98):
     if a or b is float, cast value to integer
     doc linescount must be 5
     """
-    if type(a) in [int, float]:
-        if(type(a) == float):
-            a = int(a)
-    else:
-        raise TypeError("a must be an integer")
 
-    if type(b) in [int, float]:
-        if(type(b) == float):
-            b = int(b)
-    else:
+    if (type(a) not in [int, float]):
+        raise TypeError("a must be an integer")
+    if (type(b) not in [int, float]):
         raise TypeError("b must be an integer")
-    
-    return (a + b)
+    return (int(a) + int(b))

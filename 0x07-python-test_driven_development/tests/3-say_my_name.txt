@@ -1,0 +1,59 @@
+Say my name function does just what the name implies
+====================================================
+It prints "My name is {first_name_} {last_name_}"
+
+If only one name is supplied, then it prints:
+"My name is {first_name_} "
+====================================================
+
+Test cases
+  - first_name_ & last_name_: strings
+  - first_name_: string, last_name_: not string
+  - first_name_: not string, last_name_: string
+  - both arguments not strings
+  - no last name
+  - no arguments
+
+====================================================
+test 1:
+  >>> say_my_name = __import__("3-say_my_name").say_my_name
+  >>> say_my_name('Bob', 'Marley')
+  My name is Bob Marley
+
+====================================================
+2:
+  >>> say_my_name = __import__("3-say_my_name").say_my_name
+  >>> say_my_name('Bob', True)
+  Traceback (most recent call last):
+    ...
+  TypeError: last_name must be a string
+
+====================================================
+3:
+  >>> say_my_name = __import__("3-say_my_name").say_my_name
+  >>> say_my_name(12.6, "Maria")
+  Traceback (most recent call last):
+    ...
+  TypeError: first_name must be a string
+
+====================================================
+4:
+  >>> say_my_name = __import__("3-say_my_name").say_my_name
+  >>> say_my_name(12.6, None)
+  Traceback (most recent call last):
+    ...
+  TypeError: first_name must be a string
+
+====================================================
+5:
+  >>> say_my_name = __import__("3-say_my_name").say_my_name
+  >>> say_my_name("Bob")
+  My name is Bob 
+
+====================================================
+6:
+  >>> say_my_name = __import__("3-say_my_name").say_my_name
+  >>> say_my_name()
+  Traceback (most recent call last):
+    ...
+  TypeError: say_my_name() missing 1 required positional argument: 'first_name'
