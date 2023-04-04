@@ -3,6 +3,8 @@
    Adds two arguments a and b
    raise exception if not integer or float
 """
+
+
 def add_integer(a, b=98):
     """
     Adds two integers a and b

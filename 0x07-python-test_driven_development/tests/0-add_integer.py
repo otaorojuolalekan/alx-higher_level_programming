@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+    Add integer module
+    argument b_ defaults to 98
+"""
+
+
 def add_integer(a, b=98):
     """
     Adds two integers a and b
@@ -7,6 +13,8 @@ def add_integer(a, b=98):
     if a or b is float, cast value to integer
     doc linescount must be 5
     """
+
+    
     if type(a) in [int, float]:
         if(type(a) == float):
             a = int(a)

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module to Say my Name"""
+"""Module to Say my Name
+returns predefined text + name"""
+
 
 def say_my_name(first_name, last_name=""):
     """
