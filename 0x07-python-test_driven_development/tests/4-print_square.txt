@@ -1,0 +1,95 @@
+Function to print square
+using # as building blocks
+Argument:
+size - only argument to expect, no defaults
+Raises:
+TypeError: if size not int or < 0
+
+============================================
+TEST CASES
+============================================
+  - size = 4
+  - size = 10
+  - size = 0
+  - size = 1
+  - size = -1
+  - size = 'whatever'
+  - size = True
+  - size = size (undefined)
+  - size overflow
+
+===========================================
+1. size = 4
+  >>> print_square = __import__('4-print_square').print_square
+  >>> print_square(4)
+  ####
+  ####
+  ####
+  ####
+
+===========================================
+2. size = 10
+  >>> print_square = __import__('4-print_square').print_square
+  >>> print_square(10)
+  ##########
+  ##########
+  ##########
+  ##########
+  ##########
+  ##########
+  ##########
+  ##########
+  ##########
+  ##########
+
+===========================================
+3. size = 0
+  >>> print_square = __import__('4-print_square').print_square
+  >>> print_square(0)
+
+
+===========================================
+4. size = 1
+  >>> print_square = __import__('4-print_square').print_square
+  >>> print_square(1)
+  #
+
+===========================================
+5. size = -1
+  >>> print_square = __import__('4-print_square').print_square
+  >>> print_square(-1)
+  Traceback (most recent call last):
+    ...
+  ValueError: size must be >= 0
+
+===========================================
+6. size = 'whatever'
+  >>> print_square = __import__('4-print_square').print_square
+  >>> print_square('whatever')
+  Traceback (most recent call last):
+    ...
+  TypeError: size must be an integer
+
+===========================================
+7. size = True
+  >>> print_square = __import__('4-print_square').print_square
+  >>> print_square(True)
+  Traceback (most recent call last):
+    ...
+  TypeError: size must be an integer
+
+===========================================
+8. size = size
+  >>> print_square = __import__('4-print_square').print_square
+  >>> print_square(size)
+  Traceback (most recent call last):
+    ...
+  NameError: name 'size' is not defined
+
+===========================================
+7. size = True
+  >>> print_square = __import__('4-print_square').print_square
+  >>> print_square(12345678901234567890)
+  Traceback (most recent call last):
+    ...
+  OverflowError: cannot fit 'int' into an index-sized integer

@@ -11,6 +11,8 @@ A number of test cases are possible in this module:
 # - each row of matrix not same size
 # - div not integer or float
 # - div == ZERO
+# - div overflow
+# - div a float
 
 ##### ``matrix`` a list of lists #########
 
@@ -143,3 +145,65 @@ A number of test cases are possible in this module:
    >>> matrix_divided()
    Traceback (most recent call last):
    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+#### ``div`` overflow
+
+::
+
+   >>> matrix = [
+   ... [1, 2, 3],
+   ... [4, 5, 6]
+   ... ]
+   >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+   >>> matrix_divided(matrix, 1234568901234567890)
+   [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+#### ``matrix`` overflow
+
+::
+
+   >>> matrix = [
+   ... [1234578901234578901234567890, 2, 3],
+   ... [4, 5, 6]
+   ... ]
+   >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+   >>> matrix_divided(matrix, 1) # doctest: +ELLIPSIS
+   [[1.234...e+27, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+#### ``div`` negative
+
+::
+
+   >>> matrix = [
+   ... [1, 2, 3],
+   ... [4, 5, 6]
+   ... ]
+   >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+   >>> matrix_divided(matrix, -1)
+   [[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0]]
+
+#### ``div`` nameerror
+
+::
+
+   >>> matrix = [
+   ... [1, 2, 3],
+   ... [4, 5, 6]
+   ... ]
+   >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+   >>> matrix_divided(matrix, div)
+   Traceback (most recent call last):
+   NameError: name 'div' is not defined
+
+#### ``div`` float
+
+::
+
+   >>> matrix = [
+   ... [1, 2, 3],
+   ... [4, 5, 6]
+   ... ]
+   >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+   >>> matrix_divided(matrix, 2.5)
+   [[0.4, 0.8, 1.2], [1.6, 2.0, 2.4]]
+   
