@@ -84,10 +84,23 @@ case 8: no arguments supplied
    TypeError: add_integer() missing 1 required positional argument: 'a'
 
 case 9:
-a overflow
+float overflow
 
 ::
 
    >>> add_integer = __import__('0-add_integer').add_integer
-   >>> add_integer(412315231237830148301481340183401873, 41231523123783014830148134018340187342)
-   41643838355020844978449615358523589215
+   >>> add_integer(float('inf'), float('inf'))
+   Traceback (innermost last):
+   ...
+   OverflowError: cannot convert float infinity to integer
+
+case 10:
+float NaN
+
+::
+
+   >>> add_integer = __import__('0-add_integer').add_integer
+   >>> add_integer(float('NaN'), 15)
+   Traceback (innermost last):
+   ...
+   ValueError: cannot convert float NaN to integer

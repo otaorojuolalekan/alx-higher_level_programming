@@ -13,6 +13,7 @@ A number of test cases are possible in this module:
 # - div == ZERO
 # - div overflow
 # - div a float
+# - div is infinity
 
 ##### ``matrix`` a list of lists #########
 
@@ -206,4 +207,15 @@ A number of test cases are possible in this module:
    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
    >>> matrix_divided(matrix, 2.5)
    [[0.4, 0.8, 1.2], [1.6, 2.0, 2.4]]
-   
+
+##### ``div`` infinity #########
+
+::
+
+   >>> matrix = [
+   ... [1, 2, 3],
+   ... [4, 5, 6]
+   ... ]
+   >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+   >>> matrix_divided(matrix, float('inf'))
+   [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
