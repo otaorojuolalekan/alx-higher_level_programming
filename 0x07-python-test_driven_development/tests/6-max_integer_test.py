@@ -37,7 +37,10 @@ class TestMaxInteger(unittest.TestCase):
     def test_not_a_list(self):
         self.assertRaises(
             TypeError,
-            max_integer("not a list")
+            max_integer,
+            "not a list",
+            "not a list"
+        )
             
 if __name__ == '__main__':
     unittest.main()
