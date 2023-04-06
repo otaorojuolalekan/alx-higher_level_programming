@@ -92,3 +92,14 @@ case 5: number passed
   Traceback (most recent call last):
     ...
   TypeError: text must be a string
+
+=========================================
+case 6: “Holberton School”
+
+::
+
+  >>> text_indentation = __import__('5-text_indentation').text_indentation
+  >>> text_indentation("Holberton. School")
+  Holberton.
+  <BLANKLINE>
+  School

@@ -14,6 +14,7 @@ TEST CASES
   - size = 1
   - size = -1
   - size = 'whatever'
+  - size = 1.57 (float)
   - size = True
   - size = size (undefined)
   - size overflow
@@ -55,9 +56,9 @@ TEST CASES
   #
 
 ===========================================
-5. size = -1
+5. size = -14
   >>> print_square = __import__('4-print_square').print_square
-  >>> print_square(-1)
+  >>> print_square(-14)
   Traceback (most recent call last):
     ...
   ValueError: size must be >= 0
@@ -79,12 +80,12 @@ TEST CASES
   TypeError: size must be an integer
 
 ===========================================
-8. size = size
+8. no argument
   >>> print_square = __import__('4-print_square').print_square
-  >>> print_square(size)
+  >>> print_square()
   Traceback (most recent call last):
     ...
-  NameError: name 'size' is not defined
+  TypeError: print_square() missing 1 required positional argument: 'size'
 
 ===========================================
 7. size = True
@@ -93,3 +94,11 @@ TEST CASES
   Traceback (most recent call last):
     ...
   OverflowError: cannot fit 'int' into an index-sized integer
+
+===========================================
+7. size = 6.823 (float)
+  >>> print_square = __import__('4-print_square').print_square
+  >>> print_square(6.823)
+  Traceback (most recent call last):
+    ...
+  TypeError: size must be an integer
