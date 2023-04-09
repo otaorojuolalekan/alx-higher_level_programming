@@ -34,16 +34,10 @@ class Rectangle:
 
     @property
     def width(self):
-        """
-        this returns the private width field
-        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """
-        setter function for the private width field
-        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if self.__width < 0:
@@ -52,9 +46,6 @@ class Rectangle:
 
     @property
     def height(self):
-        """
-        retrieval function for the private height field
-        """
         return self.__height
 
     @height.setter
