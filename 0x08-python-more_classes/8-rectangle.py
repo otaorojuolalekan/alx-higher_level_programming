@@ -1,10 +1,15 @@
 #!/usr/bin/python3
 """
 Everything in previous tasks in addition to:
-  Public class attribute print_symbol:
-    Initialized to #
-    Used as symbol for string representation
-    Can be any type
+    Static method def bigger_or_equal(rect_1, rect_2):
+        that returns the biggest rectangle based on the area
+        rect_1 must be an instance of Rectangle,
+        otherwise raise a TypeError exception with the message
+        rect_1 must be an instance of Rectangle
+        rect_2 must be an instance of Rectangle,
+        otherwise raise a TypeError exception with the message
+        rect_2 must be an instance of Rectangle
+        Returns rect_1 if both have the same area value
 """
 
 
@@ -89,3 +94,19 @@ class Rectangle:
         "class deletion method"
         print("Bye rectangle...")
         self.number_of_instances -= 1
+
+    def __ge__(self, other):
+        ">= magic method for comparing 2 instances"
+        return self.area() >= other.area()
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        "static method for comparing 2 instances (uses __ge__)"
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if Rectangle.__ge__(rect_1, rect_2):
+            return rect_1
+        else:
+            return rect_2
