@@ -91,7 +91,7 @@ class Rectangle:
         return ret_str
 
     def __del__(self):
-        "class deletion method"
+        """class deletion method"""
         print("Bye rectangle...")
         self.number_of_instances -= 1
 
@@ -101,7 +101,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        "static method for comparing 2 instances (uses __ge__)"
+        """static method for comparing 2 instances (uses __ge__)"""
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
