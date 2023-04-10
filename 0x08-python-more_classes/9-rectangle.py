@@ -105,17 +105,7 @@ class Rectangle:
         else:
             return rect_2
 
-    def __new__(cls, width, height):
-        """magic method that creates a new Rectangle instance"""
-        return super().__new__(width, height)
-
     @classmethod
     def square(cls, size=0):
-        """class method that returns the new Rectangle instance created"""
-        return Rectangle.__new__(size, size)
-
-
-"""     @classmethod
-    def square(cls, size=0):
         "Class method that returns a new rectangle"
-        return cls(size, size) """
+        return cls(size, size)
