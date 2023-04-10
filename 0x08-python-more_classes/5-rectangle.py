@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
 Everything in previous tasks in addition to:
-Print the message Bye rectangle... 
-(... being 3 dots not ellipsis) 
+Print the message Bye rectangle...
+(... being 3 dots not ellipsis)
 when an instance of Rectangle is deleted
 """
 
@@ -75,7 +75,7 @@ class Rectangle:
         sh = str(self.__height)
         ret_str = "Rectangle(" + sw + ", " + sh + ")"
         return ret_str
-    
+
     def __del__(self):
         "class deletion method"
         print("Bye rectangle...")
