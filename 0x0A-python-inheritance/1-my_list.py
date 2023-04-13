@@ -9,7 +9,7 @@ class MyList(list):
     """A class that inherits from
     the python builtin class of list
     """
-    
+
     def print_sorted(self):
         """
         function of child Mylist to print sorted
