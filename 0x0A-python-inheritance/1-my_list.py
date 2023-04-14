@@ -14,4 +14,5 @@ class MyList(list):
         """
         function of child Mylist to print sorted
         """
-        print(sorted(self))
+        print(sorted(self.copy()))
+
