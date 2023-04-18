@@ -11,4 +11,4 @@ def read_file(filename=""):
     """
     with open(filename, "a", encoding='UTF-8') as myfile:
         fc = myfile.append()
-        return 
+        return fc
