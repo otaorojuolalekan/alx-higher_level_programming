@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import json
 """
 0x0B. Python - Input/Output
 Task 2 - Write a function that returns the
 JSON representation of an object (string)
 """
+import json
 
 
 def to_json_string(my_obj):
