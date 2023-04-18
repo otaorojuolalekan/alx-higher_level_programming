@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 """
 0x0B. Python - Input/Output
-Task 0 - reads a text file (UTF8) and prints it to stdout
+Task 2 - appends a string at the end of a text file (UTF8)
+and returns the number of characters added
 """
 
 
-def read_file(filename=""):
+def append_write(filename="", text=""):
     """
-    This function reads a text file (UTF8) and prints it to stdout
+    This function appends a string at the end of a text file (UTF8)
+    and returns the number of characters added
     """
     with open(filename, "a", encoding='UTF-8') as myfile:
-        fc = myfile.append()
+        fc = myfile.write()
         return fc
