@@ -24,6 +24,7 @@ with open(filename) as fp:
     filecontent = load_from_json_file(filename)
     filecontent.remove(sys.argv[0])
 
-# This time, overwrite filename with filecontent(which does not have scriptname)
+# This time, overwrite filename with filecontent
+# (which does not have scriptname)
 with open(filename, mode="w", encoding="UTF-8") as fp:
     save_to_json_file(filecontent, filename)
