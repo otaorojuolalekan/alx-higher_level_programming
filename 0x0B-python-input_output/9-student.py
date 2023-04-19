@@ -13,6 +13,7 @@ Public method def to_json(self):
     instance (same as 8-class_to_json.py)
 """
 
+
 class Student:
     """
     student class containing first_name, last_name and age
