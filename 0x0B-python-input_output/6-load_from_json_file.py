@@ -12,5 +12,4 @@ def load_from_json_file(filename):
     This function creates an Object from a “JSON file”:
     """
     with open(filename, "+r", encoding="UTF-8") as filestream:
-        jsconv = json.load(filestream)
-    return jsconv
+        return json.load(filestream)
