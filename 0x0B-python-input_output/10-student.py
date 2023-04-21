@@ -31,7 +31,9 @@ class Student:
         method that retrieves dictionary repr of Student
         """
         dict_allattr = self.__dict__
-        if type(attrs) == list and all(isinstance(item, str) for item in attrs):
-            dict_allattr2 = {k:getattr(self, k) for k in attrs if hasattr(self, k)}
+        if type(attrs) == list and all(isinstance(item, str) \
+                                       for item in attrs):
+            dict_allattr2 = {k: getattr(self, k) \
+                             for k in attrs if hasattr(self, k)}
             return dict_allattr2
         return dict_allattr
