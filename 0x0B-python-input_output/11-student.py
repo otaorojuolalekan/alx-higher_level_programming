@@ -33,7 +33,7 @@ class Student:
                 {k: getattr(self, k) for k in attrs if hasattr(self, k)}
             return dict_allattr2
         return dict_allattr
-    
+
     def reload_from_json(self, json):
         """
         This method replaces all attributes
