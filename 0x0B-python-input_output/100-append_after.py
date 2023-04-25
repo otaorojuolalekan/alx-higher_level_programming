@@ -27,7 +27,6 @@ def append_after(filename="", search_string="", new_string=""):
             if search_string in line:
                 line = line.replace("\n", replacer)
             txtlist.append(line)
-
             # print(txtlist) - this was to debug
         wtr = "".join(txtlist)  # new text to write to file
     # print(wtr)    - this was to debug
