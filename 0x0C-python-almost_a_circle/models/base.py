@@ -12,8 +12,8 @@ class Base:
     Attrs:
         nb_objects --> private attribute
     """
-
     __nb_objects = 0
+
     def __init__(self, id=None):
         """
         instantiation for Base class
