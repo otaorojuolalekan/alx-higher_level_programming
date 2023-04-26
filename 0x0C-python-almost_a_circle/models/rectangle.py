@@ -24,7 +24,7 @@ class Rectangle(Base):
         Getter Method for width attribute
         """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """
@@ -43,7 +43,7 @@ class Rectangle(Base):
         Getter Method for width attribute
         """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """
@@ -62,7 +62,7 @@ class Rectangle(Base):
         Getter Method for width attribute
         """
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         """
@@ -74,7 +74,6 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
-
     # Getter and Setter for y attribute
     @property
     def y(self):
@@ -82,7 +81,7 @@ class Rectangle(Base):
         Getter Method for width attribute
         """
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         """
