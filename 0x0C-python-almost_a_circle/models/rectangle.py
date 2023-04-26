@@ -116,4 +116,4 @@ class Rectangle(Base):
     def __str__(self):
         """string magic method of instance"""
         args = [self.id, self.__x, self.__y, self.__width, self.__height]
-        return "[Rectangle] {} {}/{} - {}/{}".format(*args)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(*args)
