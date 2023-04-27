@@ -3,6 +3,7 @@
 Contains class rectangle that inherits from base
 """
 from models.base import Base
+import sys
 
 
 class Rectangle(Base):
@@ -97,23 +98,51 @@ class Rectangle(Base):
         """
         computes Area of the rectangle instance
         """
-        return self.__height * self.__width
+        return self.height * self.width
 
     def display(self):
         """
         prints the instance in stdout with char #
         Also handles vertical and horizontal offset y, x
         """
-        for a in range(self.__y):
+        for a in range(self.y):
             print()
-        for i in range(self.__height):
-            for b in range(self.__x):
+        for i in range(self.height):
+            for b in range(self.x):
                 print(" ", end="")
-            for j in range(self.__width):
+            for j in range(self.width):
                 print("#", end="")
             print()
 
     def __str__(self):
         """string magic method of instance"""
-        args = [self.id, self.__x, self.__y, self.__width, self.__height]
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(*args)
+        clsname = self.__class__.__name__
+        args = [clsname, self.id, self.x,
+                self.y, self.width, self.height]
+        return "[{}] ({}) {}/{} - {}/{}".format(*args)
+
+    def update(self, *args):
+        """
+        update the class args from CLI
+        """
+        if args and len(args):
+            try:
+                self.id = args[0]
+            except IndexError:
+                pass
+            try:
+                self.width = args[1]
+            except IndexError:
+                pass
+            try:
+                self.height = args[2]
+            except IndexError:
+                pass
+            try:
+                self.x = args[3]
+            except IndexError:
+                pass
+            try:
+                self.y = args[4]
+            except IndexError:
+                pass
