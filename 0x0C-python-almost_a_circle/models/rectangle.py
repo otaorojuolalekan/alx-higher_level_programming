@@ -121,10 +121,26 @@ class Rectangle(Base):
                 self.y, self.width, self.height]
         return "[{}] ({}) {}/{} - {}/{}".format(*args)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
+        Update class attributes from CLI arguments
+        """
+        # *args - ordered list of arguments
+        attributes = ['id', 'width', 'height', 'x', 'y']
+        for i, arg in enumerate(args):
+            if i >= len(attributes):
+                break
+            setattr(self, attributes[i], arg)
+
+        # keyworded list of arguments
+        for attribute in ['id', 'width', 'height', 'x', 'y']:
+            value = kwargs.get(attribute, None)
+            if value is not None:
+                setattr(self, attribute, value)
+
+    """ Alternate method to write (but ZEN of Python not followed)
+    def update(self, *args, **kwargs):
         update the class args from CLI
-        """
         if args and len(args):
             try:
                 self.id = args[0]
@@ -146,3 +162,8 @@ class Rectangle(Base):
                 self.y = args[4]
             except IndexError:
                 pass
+        for attribute in ['id', 'width', 'height', 'x', 'y']:
+            value = kwargs.get(attribute)
+            if value is not None:
+                setattr(self, attribute, value)
+        """
