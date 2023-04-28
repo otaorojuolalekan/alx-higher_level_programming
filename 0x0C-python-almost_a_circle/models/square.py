@@ -29,14 +29,15 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """update method for Square class"""
         attributes = ["id", "size", "x", "y"]
-        for i, arg in enumerate(args):
-            if arg is not None:
-                # print("attr[i] = {} & arg = {}".format(attributes[i], arg))
-                setattr(self, attributes[i], arg)
-
-        for k, v in kwargs.items():
-            if v is not None:
-                setattr(self, k, v)
+        if args:
+            for i, arg in enumerate(args):
+                if arg is not None:
+                    # print("attr[i] = {} & arg = {}".format(attributes[i], arg))
+                    setattr(self, attributes[i], arg)
+        elif kwargs:
+            for k, v in kwargs.items():
+                if v is not None:
+                    setattr(self, k, v)
 
     def to_dictionary(self):
         return {
