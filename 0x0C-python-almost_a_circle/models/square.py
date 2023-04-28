@@ -40,6 +40,7 @@ class Square(Rectangle):
                     setattr(self, k, v)
 
     def to_dictionary(self):
+        """dictionary method for Square"""
         return {
             'x': self.x,
             'y': self.y,
