@@ -6,6 +6,7 @@ All previous lessons learnt will come to use here.
 """
 import json
 
+
 class Base:
     """
     This is the base class of the Airbnb mini project
@@ -31,7 +32,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """returns JSON string representation of list_dict"""
         if list_dictionaries is None or list_dictionaries == []:
-            return []
+            return "[]"
         return json.dumps(list_dictionaries)
 
     # task 16
