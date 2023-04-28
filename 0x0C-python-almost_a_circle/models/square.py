@@ -38,6 +38,14 @@ class Square(Rectangle):
             if v is not None:
                 setattr(self, k, v)
 
+    def to_dictionary(self):
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'size': self.size
+        }
+
     def __str__(self):
         args = [self.__class__.__name__, self.id,
                 self.x, self.y, self.width]
