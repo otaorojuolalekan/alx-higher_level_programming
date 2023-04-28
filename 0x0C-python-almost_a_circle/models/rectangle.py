@@ -138,6 +138,16 @@ class Rectangle(Base):
             if value is not None:
                 setattr(self, attribute, value)
 
+    def to_dictionary(self):
+        """This method returns the dictionary
+        of a Rectangle instance"""
+        return {'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width
+                }
+
     """ Alternate method to write (but ZEN of Python not followed)
     def update(self, *args, **kwargs):
         update the class args from CLI
