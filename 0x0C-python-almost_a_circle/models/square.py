@@ -32,7 +32,6 @@ class Square(Rectangle):
         if args:
             for i, arg in enumerate(args):
                 if arg is not None:
-                    # print("attr[i] = {} & arg = {}".format(attributes[i], arg))
                     setattr(self, attributes[i], arg)
         elif kwargs:
             for k, v in kwargs.items():
