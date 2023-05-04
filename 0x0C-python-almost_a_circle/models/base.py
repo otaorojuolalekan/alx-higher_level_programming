@@ -45,4 +45,4 @@ class Base:
                 fp.write('[]')
             else:
                 dict_list = [obj.to_dictionary() for obj in list_objs]
-                json.dump(dict_list, fp)
+                fp.write(Base.to_json_string(dict_list))
