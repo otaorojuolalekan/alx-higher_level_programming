@@ -4,5 +4,5 @@ SELECT
 FROM 
     cities c
 wHERE
-state_id = (SELECT s.id from states WHERE s.name = 'California')
+state_id IN (SELECT s.id from states WHERE s.name = 'California')
 ORDER BY 1 ASC;
