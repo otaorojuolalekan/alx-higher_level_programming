@@ -4,4 +4,4 @@ SELECT
 FROM 
     cities
 wHERE
-state_id = 1;
+id = (SELECT id from states where name = 'California')
