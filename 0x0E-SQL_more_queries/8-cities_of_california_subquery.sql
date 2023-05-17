@@ -1,7 +1,8 @@
 --LISTS ALL CITIES OF CALIFORNIA
 SELECT 
-    id, name 
+    c.id, c.name 
 FROM 
-    cities
+    cities c
 wHERE
-id = (SELECT id from states where name = 'California')
+state_id = (SELECT s.id from states WHERE s.name = 'California')
+ORDER BY 1 ASC;
