@@ -1,13 +1,15 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 select states from db
 """
+import sys
+import MySQLdb
+
 def main():
     """
     main function to ensure it doesn't
     run on import"""
-    import sys
-    import MySQLdb
+
     db=MySQLdb.connect(user=sys.argv[1],
                        passwd=sys.argv[2],
                        database=sys.argv[3])
