@@ -15,10 +15,11 @@ def main():
 
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     cur = db.cursor()
-    cur.execute("""SELECT * FROM states WHERE name like 'N%'""")
+    cur.execute("""SELECT * FROM states""")
     result = cur.fetchall()
     for res in result:
-        print(res)
+        if res[1][0] == 'N':
+            print(res)
 
 
 if __name__ == '__main__':
