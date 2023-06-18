@@ -2,7 +2,6 @@
 """
 select states from db
 Usage: ./0-select_states.py user pass db
-
 """
 import sys
 import MySQLdb
