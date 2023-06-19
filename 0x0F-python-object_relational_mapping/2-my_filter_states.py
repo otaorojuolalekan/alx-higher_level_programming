@@ -13,13 +13,13 @@ def main():
     main function to ensure it doesn't
     run on import"""
 
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-    cur = db.cursor()
-    cur.execute("""SELECT * FROM states""")
+    conn = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM states WHERE name = '{:s}'\
+                ORDER BY id ASC".format(sys.argv[4]))
     result = cur.fetchall()
     for res in result:
-        if res[1] == sys.argv[4]:
-            print(res)
+        print(res)
 
 
 if __name__ == '__main__':
