@@ -20,6 +20,8 @@ def main():
     for res in result:
         if res[1][0] == 'N':
             print(res)
+    cur.close()
+    db.close()
 
 
 if __name__ == '__main__':

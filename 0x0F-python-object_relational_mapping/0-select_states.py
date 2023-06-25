@@ -19,6 +19,8 @@ def main():
     result = cur.fetchall()
     for res in result:
         print(res)
+    cur.close()
+    db.close()
 
 
 if __name__ == '__main__':
