@@ -2,6 +2,8 @@
 """
 Task 6 - find peak in list of int
 """
+
+
 def find_peak(list_of_integers):
     """
     Find a peak in a list of unsorted integers.
