@@ -1,3 +1,3 @@
 #!/bin/bash
 # post params
-curl -d "email=test@gmail.com" -d "subject=I%20will%20always%20be%20here%20for%20PLD" "$1"
+curl -d "email=test@gmail.com&subject=I will always be here for PLD" "$1"
