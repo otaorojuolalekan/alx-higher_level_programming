@@ -5,7 +5,7 @@ import sys
 import requests
 
 
-if __name__ == "__main__":
+def main():
     url = "https://api.github.com/repos/{}/{}/commits".format(
         sys.argv[2], sys.argv[1])
 
@@ -18,3 +18,7 @@ if __name__ == "__main__":
                 commits[i].get("commit").get("author").get("name")))
     except IndexError:
         pass
+
+
+if __name__ == "__main__":
+    main()

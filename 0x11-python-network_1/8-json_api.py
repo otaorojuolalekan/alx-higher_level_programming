@@ -8,7 +8,7 @@ import sys
 import requests
 
 
-if __name__ == "__main__":
+def main():
     letter = "" if len(sys.argv) == 1 else sys.argv[1]
     payload = {"q": letter}
 
@@ -21,3 +21,7 @@ if __name__ == "__main__":
             print("[{}] {}".format(response.get("id"), response.get("name")))
     except ValueError:
         print("Not a valid JSON")
+
+
+if __name__ == "__main__":
+    main()
